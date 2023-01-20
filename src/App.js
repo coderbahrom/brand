@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import React, { Fragment, useState, useEffect } from 'react';
 import './App.css';
-
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import { DUMMY_PRODUCTS } from './data/data';
+import HomePage from './pages/HomePage';
+import SingleProduct from './pages/SingleProduct';
+import Orders from './pages/Orders';
 function App() {
+  const [dummy, setDummy] = useState([]);
+  const [searched, setSearched] = useState('');
+
+  useEffect(() => {
+    let result = DUMMY_PRODUCTS.filter((item) => {
+      return item.company.includes(searched);
+    });
+    setDummy(result);
+    console.log(searched);
+  }, [searched]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=''>
+      <Navbar setSearched={setSearched} />
+      <Routes>
+        <Route
+          exact
+          path='/*'
+          element={<HomePage dummy={dummy} setDummy={setDummy} />}
+        />
+        <Route exact path='products/:id' element={<SingleProduct />} />
+        <Route exact path='orders' element={<Orders />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
