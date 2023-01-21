@@ -13,6 +13,8 @@ function SingleProduct() {
   const [product, setProduct] = useState('');
   useEffect(() => {
     setProduct(DUMMY_PRODUCTS.filter((p) => p.id === id));
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const [imgs, setImgs] = useState([]);
   const chooseImg = (item) => {

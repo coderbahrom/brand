@@ -1,5 +1,4 @@
 import React from 'react';
-import tshirt from '../assets/tshirt.svg';
 import { useDispatch } from 'react-redux';
 import { orderActions } from '../store/orderSlice';
 function Order({ item }) {
