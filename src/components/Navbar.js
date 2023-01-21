@@ -11,7 +11,7 @@ function Navbar({ setSearched }) {
 
   return (
     <div className='relative'>
-      <div className='flex flex-row justify-between items-center  px-[131px] pt-6 pb-6 bg-[#FFFFFF] fixed top-0 left-0 right-0 '>
+      <div className='flex flex-row justify-between items-center  px-[131px] sm:px-[70px] pt-6 pb-6 bg-[#FFFFFF] fixed top-0 left-0 right-0 '>
         <div className='flex flex-row items-center '>
           <img
             className='flex-1 md:hidden  w-[150px]  h-[46px] cursor-pointer'
@@ -21,7 +21,7 @@ function Navbar({ setSearched }) {
           <div className=' flex  flex-1'>
             <input
               onChange={searchHandler}
-              className=' sm:w-[270px] flex-1 rounded w-[421px] h-[40px] box-border border border-solid focus:outline-[#0D6EFD] '
+              className=' sm:w-[250px] flex-1 rounded w-[421px] h-[40px] box-border border border-solid focus:outline-[#0D6EFD] '
               placeholder=' Search'
             />
             <button className='lg:hidden rounded w-[100px] h-[38px] border-box border-1 bg-gradient-to-r from-[#127FFF] to-[#0067FF] not-italic font-medium leading-[19px] text-[16px] text-[#FFFFFF]'>

@@ -26,7 +26,7 @@ function SingleProduct() {
   const values =
     'not-italic leading-[19px] text-[16px] text-[#505050] font-normal flex-initial';
   return (
-    <div className='  pt-[20px] pl-[126px] pr-[130px] h-full  mt-[100px]'>
+    <div className='  pt-[20px] pl-[126px] pr-[130px] h-full  mt-[100px] sm:px-[70px]'>
       <div className='flex flex-row justify-between gap-4 bg-[#FFFFFF] pr-[31px] pt-[17px] pb-[40px] lg:flex-wrap items-center pl-[40px] '>
         <div className='w-1/3 box-border pl-[19px] lg:w-2/3 '>
           <img

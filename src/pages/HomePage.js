@@ -37,7 +37,7 @@ function HomePage({ dummy, setDummy }) {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
     <Fragment>
-      <div className='bg-[#F7FAFC] px-[131px] pt-6 pb-6 flex flex-row gap-7 mt-[100px] '>
+      <div className='bg-[#F7FAFC] px-[131px] pt-6 pb-6 flex flex-row gap-7 mt-[100px] sm:px-[70px] '>
         <div className='ms:hidden'>
           <Sidebar />
         </div>

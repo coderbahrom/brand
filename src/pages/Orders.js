@@ -27,7 +27,7 @@ function Orders() {
     );
   }
   return (
-    <div className='px-[130px] mb-5 mt-[120px]  '>
+    <div className='px-[130px] mb-5 mt-[120px]  sm:px-[70px] '>
       <h1 className='not-italic leading-[32px] text-[24px] text-[#000000] font-bold'>
         Orders({orderedData.length})
       </h1>
